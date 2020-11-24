@@ -4,9 +4,12 @@ import java.util.Scanner;
 
 public class principal {
 
+	private static Scanner sc;
+
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 		int valor1, valor2;
+		 try{
 
 		System.out.println("Ingrese un número entero: ");
 		valor1 = sc.nextInt();
@@ -47,16 +50,25 @@ public class principal {
 		valor2 = sc.nextInt();
 		
 		
-		
+		if (valor2 !=0)
+		{
 		resultado = valor1 / valor2;  //división
-		System.out.println("La división es: " + resultado);
+		System.out.println("La división es: " + resultado);	
 		
 		System.out.println("Ingrese un número entero: ");
 		valor1 = sc.nextInt();
 		
 		System.out.println("Ingrese un número entero: ");
 		valor2 = sc.nextInt();
-	
+		}
+		else
+		{
+			System.out.println("No se puede dividir por cero");	
+		}
+		 }
+	catch(Exception ex)
+	{
+		System.out.println("Ingreso un valor inesperado y el programa se cierra");
 	}
-
+  }
 }
